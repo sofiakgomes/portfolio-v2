@@ -7,4 +7,4 @@ import i6 from "./6.jpg";
 import i7 from "./7.jpg";
 import i8 from "./8.jpg";
 
-export { i1, i2, i3, i4, i5, i6, i7, i8 };
+export default [ i1, i2, i3, i4, i5, i6, i7, i8 ];

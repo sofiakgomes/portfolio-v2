@@ -17,7 +17,7 @@ import i16 from "./16.jpg";
 import i17 from "./17.jpg";
 import i18 from "./18.jpg";
 
-export {
+export default [
   i1,
   i2,
   i3,
@@ -36,4 +36,4 @@ export {
   i16,
   i17,
   i18
-};
+];
