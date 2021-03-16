@@ -1,0 +1,11 @@
+.showcase {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 100px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}

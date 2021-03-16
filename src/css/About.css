@@ -1,0 +1,34 @@
+.about {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-row {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-row img {
+    height: 100%;
+    max-width: 40vw;
+    object-fit: contain;
+    margin-right: 25px;
+}
+.about-text {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 25px;
+}
+
+.about-text a {
+    color: gray;
+    /* text-decoration: none; */
+}

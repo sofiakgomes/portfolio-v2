@@ -1,0 +1,285 @@
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  animation: scrolling;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  overflow-anchor: none;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+.overlay-face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  z-index: 3;
+}
+
+.overlay-face.face1 {
+  opacity: 1;
+  animation-name: face1, translate;
+  animation-duration: 2.5s, 1.5s;
+  animation-delay: 0.5s, 3s;
+  animation-fill-mode: forwards;
+}
+
+.overlay-face.face2 {
+  opacity: 0;
+  animation-name: face2, translate;
+  animation-duration: 2.5s, 1.5s;
+  animation-delay: 0.5s, 3s;
+  animation-fill-mode: forwards;
+}
+
+.overlay-face.face3 {
+  opacity: 0;
+  animation-name: face3, translate;
+  animation-duration: 2.5s, 1.5s;
+  animation-delay: 0.5s, 3s;
+  animation-fill-mode: forwards;
+}
+
+.overlay-face.face4 {
+  opacity: 0;
+  animation-name: face4, translate;
+  animation-duration: 2.5s, 1.5s;
+  animation-delay: 0.5s, 3s;
+  animation-fill-mode: forwards;
+}
+
+.home {
+  position: absolute;
+  top: 30px;
+  left: 70px;
+  height: 95px;
+  width: 60px;
+}
+
+.home .home-face {
+  position: absolute;
+  width: 60px;
+}
+
+.home .face1 {
+  opacity: 0;
+  animation-name: face1;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-delay: 4.5s;
+}
+
+.home .face2 {
+  opacity: 0;
+  animation-name: face2;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-delay: 4.5s;
+}
+
+.home .face3 {
+  opacity: 0;
+  animation-name: face3;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-delay: 4.5s;
+}
+
+.home .face4 {
+  opacity: 0;
+  animation-name: face4;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-delay: 4.5s;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  font-size: 3em;
+  margin: 30px 65px 30px 210px;
+}
+
+.header .hamburger {
+  margin-left: auto !important;
+  transform: translateY(-5px);
+}
+
+.menu {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #fffdf7;
+  margin: 0;
+  padding: 50px 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.menu a {
+  color: black;
+  font-size: 1.6em;
+  text-decoration: none;
+}
+
+.menu.show {
+  animation-name: enter;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.menu.hide {
+  animation-name: exit;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scrolling {
+  from {
+    overflow-y: hidden;
+  }
+  to {
+    overflow-y: auto;
+  }
+}
+
+@keyframes face1 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes face2 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes face3 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes face4 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes translate {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+  }
+  100% {
+    top: 30px;
+    left: 70px;
+    transform: translate(0, 0);
+    width: 60px;
+    visibility: hidden;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes enter {
+  from {
+    visibility: visible;
+    opacity: 0;
+    top: -80px;
+  }
+  to {
+    visibility: visible;
+    opacity: 0.85;
+    top: 0;
+  }
+}
+
+@keyframes exit {
+  from {
+    visibility: visible;
+    opacity: 0.85;
+    top: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+    top: -80px;
+  }
+}
