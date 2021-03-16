@@ -1,6 +1,19 @@
-import face1 from "./face1.png";
-import face2 from "./face2.png";
-import face3 from "./face3.png";
-import face4 from "./face4.png";
+import face1L from "./face1L.png";
+import face2L from "./face2L.png";
+import face3L from "./face3L.png";
+import face4L from "./face4L.png";
+import face1S from "./face1S.png";
+import face2S from "./face2S.png";
+import face3S from "./face3S.png";
+import face4S from "./face4S.png";
 
-export { face1, face2, face3, face4 };
+export {
+  face1L,
+  face2L,
+  face3L,
+  face4L,
+  face1S,
+  face2S,
+  face3S,
+  face4S
+};
