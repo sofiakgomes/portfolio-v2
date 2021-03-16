@@ -6,7 +6,9 @@ import {
   Slide,
   ButtonBack,
   ButtonNext,
-  Dot
+  Dot,
+  Image,
+  ImageWithZoom
 } from 'pure-react-carousel';
 
 function Carousel(props) {
@@ -14,7 +16,7 @@ function Carousel(props) {
   return (
     <CarouselProvider
       visibleSlides={props.visibleSlides || 3}
-      totalSlides={props.children.length + 1}
+      totalSlides={props.images.length + 1}
       isIntrinsicHeight={true}
     >
       <div className="carousel-container">
@@ -25,10 +27,10 @@ function Carousel(props) {
               <p>{props.description}</p>
             </div>
           </Slide>
-          {props.children.map((child, i) => (
+          {props.images.map((image, i) => (
             <Slide index={i+1}>
               <div className="slide">
-                {child}
+                <Image src={image} />
               </div>
             </Slide>
           ))}
@@ -42,7 +44,7 @@ function Carousel(props) {
       </div>
       <div className="dot-group">
       <Dot slide={0}>&bull;</Dot>
-      {props.children.map((child, i) => (
+      {props.images.map((_, i) => (
         <Dot slide={i+1}>&bull;</Dot>
       ))}
       </div>
