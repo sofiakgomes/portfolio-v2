@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <img className="overlay-face face1" src={face1}></img>
       <img className="overlay-face face2" src={face2}></img>
       <img className="overlay-face face3" src={face3}></img>
