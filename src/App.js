@@ -1,7 +1,7 @@
 import "./css/App.css";
 import "./css/Hamburgers.css";
 import { useState, useEffect } from "react";
-import { face1, face2, face3, face4 } from "./assets/faces";
+import * as faces from "./assets/faces";
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,7 +11,7 @@ import {
 import {
   Home,
   About,
-  Bauhaus,
+  Posters,
   Box,
   Epoque,
   Zine
@@ -20,25 +20,31 @@ import {
 const menuClass = { null: "", true: "show", false: "hide" }
 
 function App() {
+  const [ overlayVisible, setOverlay ] = useState(true);
   const [ menuOpen, setMenu ] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setTimeout(() => window.scrollTo(0, 0), 50); // Needed for Chrome
+    setTimeout(() => window.scrollTo(0, 0), 500); // Needed for Chrome
+    setTimeout(() => setOverlay(false), 5000);
   }, [])
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      <img className="overlay-face face1" src={face1}></img>
-      <img className="overlay-face face2" src={face2}></img>
-      <img className="overlay-face face3" src={face3}></img>
-      <img className="overlay-face face4" src={face4}></img>
-      <div className="overlay"></div>
+      {overlayVisible &&
+        <div>
+          <img className="overlay-face face1" src={faces.face1L}></img>
+          <img className="overlay-face face2" src={faces.face2L}></img>
+          <img className="overlay-face face3" src={faces.face3L}></img>
+          <img className="overlay-face face4" src={faces.face4L}></img>
+          <div className="overlay" />
+        </div>
+      }
       <Link className="home" to="/">
-        <img className="home-face face1" src={face1}></img>
-        <img className="home-face face2" src={face2}></img>
-        <img className="home-face face3" src={face3}></img>
-        <img className="home-face face4" src={face4}></img>
+        <img className="home-face face1" src={faces.face1S}></img>
+        <img className="home-face face2" src={faces.face2S}></img>
+        <img className="home-face face3" src={faces.face3S}></img>
+        <img className="home-face face4" src={faces.face4S}></img>
       </Link>
       <div className={`menu ${menuClass[menuOpen]}`}>
         <Link to="/"><a>Home</a></Link>
@@ -58,8 +64,8 @@ function App() {
         <Route path="/about">
           <About />
         </Route>
-        <Route path="/bauhaus">
-          <Bauhaus />
+        <Route path="/posters">
+          <Posters />
         </Route>
         <Route path="/box">
           <Box />
