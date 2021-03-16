@@ -26,7 +26,7 @@ function Home() {
         url={videoUrl2}
       />
       <div className="column">
-        <ShowcaseItem image={thumbnails.bauhaus} caption="Bauhaus Posters" link="/bauhaus" />
+        {/* <ShowcaseItem image={thumbnails.bauhaus} caption="Bauhaus Posters" link="/bauhaus" /> */}
         <ShowcaseItem image={thumbnails.zine} caption="Zine" link="/zine" />
         <ShowcaseItem image={thumbnails.campaign2} caption="COVID-19 Feelings" link={campaignLink2} />
       </div>
