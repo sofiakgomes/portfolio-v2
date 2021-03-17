@@ -11,9 +11,10 @@ import {
 import {
   Home,
   About,
-  Posters,
   Box,
   Epoque,
+  Posters,
+  SurvivalKit,
   Zine
 } from "./pages";
 
@@ -64,14 +65,17 @@ function App() {
         <Route path="/about">
           <About />
         </Route>
-        <Route path="/posters">
-          <Posters />
-        </Route>
         <Route path="/box">
           <Box />
         </Route>
         <Route path="/epoque">
           <Epoque />
+        </Route>
+        <Route path="/posters">
+          <Posters />
+        </Route>
+        <Route path="/survivalkit">
+          <SurvivalKit />
         </Route>
         <Route path="/zine">
           <Zine />

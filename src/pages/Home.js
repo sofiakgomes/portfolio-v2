@@ -31,14 +31,14 @@ function Home() {
         <ShowcaseItem image={thumbnails.campaign2} caption="COVID-19 Feelings" link={campaignLink2} />
       </div>
       <div className="column">
-        {/* <ShowcaseItem image={thumbnails.ogilvy} /> */}
+        <ShowcaseItem image={thumbnails.ogilvy} />
         <ShowcaseItem image={thumbnails.table} caption="What Do I Bring to the Table?" onClick={() => setVideo1(true)} />
         <ShowcaseItem image={thumbnails.box} caption="Pencil Box" link="/box" />
         <ShowcaseItem image={thumbnails.ipanema} caption="Girl That Isn't From Ipanema" onClick={() => setVideo2(true)} />
       </div>
       <div className="column">
         <ShowcaseItem image={thumbnails.campaign1} caption="Confessions of a 21-year-old" link={campaignLink1} />
-        {/* <ShowcaseItem image={thumbnails.tampon} caption="Modern Woman Survival Kit" link="/tampon" /> */}
+        <ShowcaseItem image={thumbnails.tampon} caption="Modern Woman Survival Kit" link="/survivalkit" />
         <ShowcaseItem image={thumbnails.epoque} caption="La Belle Epoque" link="/epoque" />
       </div>
     </div>

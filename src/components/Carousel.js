@@ -17,7 +17,9 @@ function Carousel(props) {
     <CarouselProvider
       visibleSlides={props.visibleSlides || 3}
       totalSlides={props.images.length + 1}
-      isIntrinsicHeight={true}
+      isIntrinsicHeight={!(props.height || props.width)}
+      naturalSlideHeight={props.height}
+      naturalSlideWidth={props.width}
     >
       <div className="carousel-container">
         <Slider>

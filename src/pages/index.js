@@ -1,8 +1,9 @@
 import Home from "./Home";
 import About from "./About";
-import Posters from "./Posters";
 import Box from "./Box";
 import Epoque from "./Epoque";
+import Posters from "./Posters";
+import SurvivalKit from "./SurvivalKit";
 import Zine from "./Zine";
 
-export { Home, About, Posters, Box, Epoque, Zine };
+export { Home, About, Box, Epoque, Posters, SurvivalKit, Zine };
