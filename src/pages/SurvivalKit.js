@@ -1,7 +1,7 @@
 import "../css/Presentation.css";
 import { useEffect } from "react";
 import Carousel from "../components/Carousel";
-import { images, i5, i6, video } from "../assets/survivalkit";
+import { images, i7, i8, video } from "../assets/survivalkit";
 
 const title = "Modern Woman Survival Kit";
 const desc =
@@ -29,6 +29,7 @@ function SurvivalKit(props) {
         description={desc}
         images={images}
         visibleSlides={slides}
+        titlePadding={30}
         maxHeight="550px"
         titleSize="4em"
       />
@@ -40,7 +41,7 @@ function SurvivalKit(props) {
         Women often feel ashamed of their periods, and the subject itself it's still an enormous 
         taboo in our society. Therefore, I wanted to celebrate such an important aspect of womanhood.
       </p>
-      <img className="presentation-extra" src={i5} />
+      <img className="presentation-extra" src={i7} />
       <p className="presentation-text">
         The strip below wraps around the tampon and contains an infographic printed on its inside 
         explaining the items contained and the reason why they are relevant to the well-being of a 
@@ -52,7 +53,7 @@ function SurvivalKit(props) {
         helping hand to all females who have no time to waste and always need to be reminded that 
         they are powerful, awesome human beings. After all, us ladies must thrive to survive.
       </p>
-      <img className="presentation-extra" src={i6} />
+      <img className="presentation-extra" src={i8} />
     </div>
   );
 }

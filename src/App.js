@@ -41,7 +41,9 @@ function App() {
   const [ menuOpen, setMenu ] = useState(null);
 
   useEffect(() => {
+    document.body.style.overflowY = "hidden";
     window.scrollTo(0, 0);
+    setTimeout(() => document.body.style.overflowY = "unset", 3000);
     setTimeout(() => window.scrollTo(0, 0), 500); // Needed for Chrome
     setTimeout(() => setOverlay(false), 6500);
   }, []);

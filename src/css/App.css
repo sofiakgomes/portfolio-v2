@@ -1,10 +1,6 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   overflow-x: hidden;
-  overflow-y: hidden;
-  animation: scrolling;
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
   overflow-anchor: none;
 }
 
@@ -191,15 +187,6 @@ body {
   animation-name: exit;
   animation-duration: 0.4s;
   animation-fill-mode: forwards;
-}
-
-@keyframes scrolling {
-  from {
-    overflow-y: hidden;
-  }
-  to {
-    overflow-y: auto;
-  }
 }
 
 @keyframes face1 {

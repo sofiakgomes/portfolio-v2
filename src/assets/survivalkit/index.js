@@ -4,8 +4,10 @@ import i3 from "./3.jpg";
 import i4 from "./4.jpg";
 import i5 from "./5.jpg";
 import i6 from "./6.jpg";
+import i7 from "./7.jpg";
+import i8 from "./8.jpg";
 import video from "./inside.mp4";
 
-const images = [ i1, i2, i3, i4 ];
+const images = [ i1, i2, i3, i4, i5, i6 ];
 
-export { images, i5, i6, video };
+export { images, i7, i8, video };

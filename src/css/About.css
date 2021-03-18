@@ -1,5 +1,6 @@
 .about {
   height: 70vh;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
