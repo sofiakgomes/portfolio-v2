@@ -38,14 +38,14 @@ function SurvivalKit(props) {
       </video>
       <p className="presentation-text">
         With the word "celebration" in mind, I created a box / purse in the shape of a tampon. 
-        Women often feel ashamed of their periods, and the subject itself it's still an enormous 
+        Women often feel ashamed of their periods, and the subject itself is still an enormous 
         taboo in our society. Therefore, I wanted to celebrate such an important aspect of womanhood.
       </p>
       <img className="presentation-extra" src={i7} />
       <p className="presentation-text">
         The strip below wraps around the tampon and contains an infographic printed on its inside 
         explaining the items contained and the reason why they are relevant to the well-being of a 
-        modern woman.  Additionally, it features an introductory message:
+        modern woman. Additionally, it features an introductory message:
       </p>
       <p className="presentation-text">
         What do 21st century women need? Besides respect, equality and admiration. They need to not 
