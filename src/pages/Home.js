@@ -6,7 +6,7 @@ import * as thumbnails from "../assets/thumbnails";
 
 const campaignLink1 = "https://www.campaignlive.com/article/confessions-21-year-old-young-female-consumers-really-want/1675518";
 const campaignLink2 = "https://www.campaignlive.com/article/adlands-younger-talent-share-feelings-covid-19-crisis/1678004";
-const videoUrl1 = "https://www.youtube.com/embed/WqxZCZFD0BI";
+const videoUrl1 = "https://www.youtube.com/embed/jdtn_tqYT54";
 const videoUrl2 = "https://www.youtube.com/embed/xZoCYzmMqsU";
 
 
