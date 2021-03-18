@@ -13,14 +13,19 @@
 
 .carousel {
   position: relative;
-  height: 100%;
-  width: 100%;
+  max-width: 100vw;
   margin-bottom: 50px;
 }
 
 .carousel-container {
   position: relative;
   margin: 0 100px 20px 100px;
+}
+
+@media screen and (max-width: 500px) {
+  .carousel-container {
+    margin: 0 30px 20px 30px;
+  }
 }
 
 .button-back {
@@ -30,11 +35,28 @@
   transform: translateY(-50%);
 }
 
+@media screen and (max-width: 500px) {
+  .button-back {
+    left: -30px;
+  }
+}
+
 .button-next {
   position: absolute;
   top: 50%;
   right: -75px;
   transform: translateY(-50%);
+}
+
+@media screen and (max-width: 500px) {
+  .button-next {
+    right: -30px;
+    padding: 0;
+  }
+}
+
+.button-back:focus, .button-next:focus {
+  outline: none;
 }
 
 .button {
@@ -53,13 +75,20 @@
   justify-content: flex-end;
   align-items: flex-end;
   text-align: right;
-  /* transform: translateY(-100px); */
+}
+
+.carousel-title.single {
+  margin: 0 10px;
 }
 
 .carousel-title h1 {
   margin: 10px 0;
   font-size: 6em;
   font-weight: normal;
+}
+
+.carousel-title.single h1 {
+  font-size: 10vw;
 }
 
 .carousel-title p {
@@ -89,4 +118,5 @@
   border: none;
   background: none;
   font-size: 2em;
+  outline: none;
 }

@@ -22,12 +22,20 @@ body {
 }
 
 .overlay-face {
+  width: 350px;
+  max-height: 90vh;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 350px;
+  object-fit: contain;
   z-index: 3;
+}
+
+@media screen and (max-width: 360px) {
+  .overlay-face {
+    width: 90%;
+  }
 }
 
 .overlay-face.face1 {
@@ -107,6 +115,12 @@ body {
   animation-delay: 4.5s;
 }
 
+@media screen and (max-width: 700px) {
+  .home {
+    left: 30px;
+  }
+}
+
 .name {
   position: absolute;
   top: 55px;
@@ -115,26 +129,37 @@ body {
   color: black;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  font-size: 3em;
-  margin: 30px 65px 30px 210px;
+@media screen and (max-width: 700px) {
+  .name {
+    visibility: hidden;
+  }
 }
 
-.header .hamburger {
-  margin-left: auto !important;
-  transform: translateY(-5px);
+.hamburger {
+  position: absolute;
+  top: 45px;
+  right: 65px;
+}
+
+@media screen and (max-width: 700px) {
+  .hamburger {
+    right: 10px;
+  }
+}
+
+.header {
+  height: 140px;
+  width: 100%;
 }
 
 .menu {
   position: absolute;
-  height: 45px;
+  height: 48px;
   width: 100vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   margin: 0;
   padding: 50px 0;
   overflow: hidden;
@@ -145,6 +170,15 @@ body {
   color: black;
   font-size: 1.4em;
   text-decoration: none;
+}
+
+@media screen and (max-width: 450px) {
+  .menu {
+    justify-content: center;
+  }
+  .menu a {
+    margin: 0 5px;
+  }
 }
 
 .menu.show {
@@ -241,18 +275,24 @@ body {
 }
 
 @keyframes translate {
-  0% {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-  }
   100% {
     top: 30px;
     left: 70px;
     transform: translate(0, 0);
     width: 60px;
     visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  @keyframes translate {
+    100% {
+      top: 30px;
+      left: 30px;
+      transform: translate(0, 0);
+      width: 60px;
+      visibility: hidden;
+    }
   }
 }
 
@@ -277,7 +317,7 @@ body {
   }
   to {
     visibility: visible;
-    opacity: 0.85;
+    opacity: 1;
     top: 0;
   }
 }

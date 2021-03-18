@@ -8,13 +8,18 @@ const desc =
   by Brazilian photographer Sebastião Salgado. Printing and craftsmanship were hand made by me, \
   using a mix of pink cover paper and vellum to incorporate transparency and connect the images across pages.";
 
-function Zine() {
+function Zine(props) {
+  let slides = 2;
+  if (props.width < 1500) {
+    slides = 1;
+  }
+
   return (
     <div className="presentation">
       <Carousel
         title={title}
         description={desc}
-        visibleSlides={2}
+        visibleSlides={slides}
         images={images}
         titlePadding={40}
       />

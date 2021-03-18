@@ -1,6 +1,6 @@
 import "./css/App.css";
 import "./css/Hamburgers.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import * as faces from "./assets/faces";
 import {
   BrowserRouter as Router,
@@ -20,15 +20,31 @@ import {
 
 const menuClass = { null: "", true: "show", false: "hide" }
 
+const useResize = (ref) => {
+  const [ width, setWidth ] = useState(0);
+  useEffect(() => {
+    setWidth(ref.current.offsetWidth);
+    const handleResize = () => {
+      setWidth(ref.current.offsetWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [ref]);
+  return width;
+}
+
 function App() {
+  const ref = useRef(null);
+  const width = useResize(ref);
+
   const [ overlayVisible, setOverlay ] = useState(true);
   const [ menuOpen, setMenu ] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     setTimeout(() => window.scrollTo(0, 0), 500); // Needed for Chrome
-    setTimeout(() => setOverlay(false), 5000);
-  }, [])
+    setTimeout(() => setOverlay(false), 6500);
+  }, []);
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
@@ -52,39 +68,40 @@ function App() {
         <Link to="/" onClick={() => setMenu(false)}><a>HOME</a></Link>
         <Link to="/about" onClick={() => setMenu(false)}><a>ABOUT</a></Link>
       </div>
-      <div className="header">
-        <div 
-          className={`hamburger hamburger--collapse ${menuOpen ? "is-active" : ""}`}
-          onClick={() => setMenu(!menuOpen)}
-        >
-          <div className="hamburger-box">
-            <div className="hamburger-inner"></div>
-          </div>
+      <div 
+        className={`hamburger hamburger--collapse ${menuOpen ? "is-active" : ""}`}
+        onClick={() => setMenu(!menuOpen)}
+      >
+        <div className="hamburger-box">
+          <div className="hamburger-inner"></div>
         </div>
       </div>
-      <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/box">
-          <Box />
-        </Route>
-        <Route path="/epoque">
-          <Epoque />
-        </Route>
-        <Route path="/posters">
-          <Posters />
-        </Route>
-        <Route path="/survivalkit">
-          <SurvivalKit />
-        </Route>
-        <Route path="/zine">
-          <Zine />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
+      <div className="header" />
+      <div ref={ref}>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/box">
+            <Box width={width} />
+          </Route>
+          <Route path="/epoque">
+            <Epoque width={width} />
+          </Route>
+          <Route path="/posters">
+            <Posters width={width} />
+          </Route>
+          <Route path="/survivalkit">
+            <SurvivalKit width={width} />
+          </Route>
+          <Route path="/zine">
+            <Zine width={width} />
+          </Route>
+          <Route path="/">
+            <Home width={width} />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
 }

@@ -1,4 +1,5 @@
 import "../css/Presentation.css";
+import { useEffect } from "react";
 import Carousel from "../components/Carousel";
 import { images, i5, i6, video } from "../assets/survivalkit";
 
@@ -8,14 +9,26 @@ const desc =
   our gender, while also bringing awareness and breaking barriers. That's \
   why I created a Modern Woman Survival Kit.";
 
-function SurvivalKit() {
+function SurvivalKit(props) {
+
+  useEffect(() => window.scrollTo(0, 0), []);
+
+  let slides = 4;
+  if (props.width < 900) {
+    slides = 1;
+  } else if (props.width < 1200) {
+    slides = 2;
+  } else if (props.width < 1500) {
+    slides = 3;
+  }
+
   return (
     <div className="presentation">
       <Carousel
         title={title}
         description={desc}
         images={images}
-        visibleSlides={4}
+        visibleSlides={slides}
         maxHeight="550px"
         titleSize="4em"
       />

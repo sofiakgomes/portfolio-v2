@@ -6,13 +6,18 @@ const title = "Pencil Box";
 const desc = 
   "Self-promoting teaser with custom made pencils and flyer which together form a message to potential employers.";
 
-function Box() {
+function Box(props) {
+  let slides = 2;
+  if (props.width < 1500) {
+    slides = 1;
+  }
+
   return (
     <div className="presentation">
       <Carousel
         title={title}
         description={desc}
-        visibleSlides={2}
+        visibleSlides={slides}
         images={images}
         titlePadding={40}
       />

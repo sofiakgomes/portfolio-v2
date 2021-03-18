@@ -19,6 +19,12 @@
   font-size: 1.1em;
 }
 
+@media screen and (max-width: 1400px) {
+  .presentation-text {
+    width: 75vw;
+  }
+}
+
 video:focus {
     outline: none;
 }

@@ -12,6 +12,7 @@ import {
 } from 'pure-react-carousel';
 
 function Carousel(props) {
+  const singleSlide = props.visibleSlides === 1;
 
   return (
     <CarouselProvider
@@ -23,14 +24,14 @@ function Carousel(props) {
         <Slider>
           <Slide index={0}>
             <div
-              className="carousel-title"
+              className={`carousel-title ${singleSlide ? "single" : ""}`}
               style={{
                 maxHeight: props.maxHeight,
-                paddingRight: props.titlePadding
+                paddingRight: singleSlide ? 0 : props.titlePadding
               }
             }>
               <h1
-                style={props.titleSize ? { fontSize: props.titleSize } : {}}
+                style={props.titleSize && !singleSlide ? { fontSize: props.titleSize } : {}}
               >
                   {props.title.toUpperCase()}
               </h1>
