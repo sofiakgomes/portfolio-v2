@@ -20,7 +20,7 @@ function ShowcaseItem(props) {
     >
       {props.caption &&
         <div className="item-overlay">
-          <div className="item-text">{props.caption}</div>
+          <div className="item-text">{props.caption.toUpperCase()}</div>
         </div>
       }
       <img className="item" src={props.image}></img>

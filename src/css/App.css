@@ -1,4 +1,5 @@
 body {
+  font-family: Helvetica, Arial, sans-serif;
   overflow-x: hidden;
   overflow-y: hidden;
   animation: scrolling;
@@ -106,6 +107,14 @@ body {
   animation-delay: 4.5s;
 }
 
+.name {
+  position: absolute;
+  top: 55px;
+  left: 150px;
+  font-size: 2em;
+  color: black;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -120,10 +129,12 @@ body {
 
 .menu {
   position: absolute;
+  height: 45px;
   width: 100vw;
   display: flex;
   justify-content: space-evenly;
-  background-color: #fffdf7;
+  align-items: center;
+  background-color: #ffffff;
   margin: 0;
   padding: 50px 0;
   overflow: hidden;
@@ -132,7 +143,7 @@ body {
 
 .menu a {
   color: black;
-  font-size: 1.6em;
+  font-size: 1.4em;
   text-decoration: none;
 }
 

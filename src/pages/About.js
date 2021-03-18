@@ -7,7 +7,7 @@ function About() {
       <div className="about-row">
         <img src={sofia} />
         <div className="about-text">
-          <h1>About</h1>
+          <h1>ABOUT</h1>
           <p>
             My name is Sofia Gomes. I'm a proud Brazilian and an aspiring Art Director currently living in Atlanta, GA.
           </p>
@@ -28,11 +28,14 @@ function About() {
             You can find my resume{" "}
             <a href="https://raw.githubusercontent.com/sgomes31/portfolio/main/src/assets/about/resume.pdf" target="_blank">here</a>.
           </p>
-          <h1>Contact</h1>
+          <h1>CONTACT</h1>
           <p>
             <a href="mailto:sofiakfourigomes@gmail.com">sofiakfourigomes@gmail.com</a><br/>
             <a href="https://www.linkedin.com/in/sofia-gomes-3899b7183/" target="_blank">
               https://www.linkedin.com/in/sofia-gomes-3899b7183/
+            </a><br/>
+            <a href="https://twitter.com/sofiakpgomes_" target="_blank">
+              https://twitter.com/sofiakpgomes_
             </a><br/>
             404-563-6718
           </p>

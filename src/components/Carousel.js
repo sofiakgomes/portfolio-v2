@@ -17,22 +17,30 @@ function Carousel(props) {
     <CarouselProvider
       visibleSlides={props.visibleSlides || 3}
       totalSlides={props.images.length + 1}
-      isIntrinsicHeight={!(props.height || props.width)}
-      naturalSlideHeight={props.height}
-      naturalSlideWidth={props.width}
+      isIntrinsicHeight={true}
     >
       <div className="carousel-container">
         <Slider>
           <Slide index={0}>
-            <div className="carousel-title">
-              <h1>{props.title}</h1>
+            <div
+              className="carousel-title"
+              style={{
+                maxHeight: props.maxHeight,
+                paddingRight: props.titlePadding
+              }
+            }>
+              <h1
+                style={props.titleSize ? { fontSize: props.titleSize } : {}}
+              >
+                  {props.title.toUpperCase()}
+              </h1>
               <p>{props.description}</p>
             </div>
           </Slide>
           {props.images.map((image, i) => (
             <Slide index={i+1}>
               <div className="slide">
-                <Image src={image} />
+                <Image src={image} style={{ maxHeight: props.maxHeight }} />
               </div>
             </Slide>
           ))}
@@ -45,10 +53,10 @@ function Carousel(props) {
         </ButtonNext>
       </div>
       <div className="dot-group">
-      <Dot slide={0}>&bull;</Dot>
-      {props.images.map((_, i) => (
-        <Dot slide={i+1}>&bull;</Dot>
-      ))}
+        <Dot slide={0}>&bull;</Dot>
+        {props.images.map((_, i) => (
+          <Dot slide={i+1}>&bull;</Dot>
+        ))}
       </div>
     </CarouselProvider>
   );

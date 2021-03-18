@@ -47,13 +47,14 @@ function App() {
         <img className="home-face face3" src={faces.face3S}></img>
         <img className="home-face face4" src={faces.face4S}></img>
       </Link>
+      <Link to="/"><div className="name">SOFIA GOMES</div></Link>
       <div className={`menu ${menuClass[menuOpen]}`}>
-        <Link to="/"><a>Home</a></Link>
-        <Link to="/about"><a>About</a></Link>
+        <Link to="/" onClick={() => setMenu(false)}><a>HOME</a></Link>
+        <Link to="/about" onClick={() => setMenu(false)}><a>ABOUT</a></Link>
       </div>
       <div className="header">
         <div 
-          className={`hamburger hamburger--slider ${menuOpen ? "is-active" : ""}`}
+          className={`hamburger hamburger--collapse ${menuOpen ? "is-active" : ""}`}
           onClick={() => setMenu(!menuOpen)}
         >
           <div className="hamburger-box">
