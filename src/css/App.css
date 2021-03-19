@@ -44,25 +44,25 @@ body {
 
 .overlay-face.face2 {
   opacity: 0;
-  animation-name: face2, translate;
-  animation-duration: 2.5s, 1.5s;
-  animation-delay: 0.5s, 3s;
+  animation-name: face2;
+  animation-duration: 2.5s;
+  animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
 
 .overlay-face.face3 {
   opacity: 0;
-  animation-name: face3, translate;
-  animation-duration: 2.5s, 1.5s;
-  animation-delay: 0.5s, 3s;
+  animation-name: face3;
+  animation-duration: 2.5s;
+  animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
 
 .overlay-face.face4 {
   opacity: 0;
-  animation-name: face4, translate;
-  animation-duration: 2.5s, 1.5s;
-  animation-delay: 0.5s, 3s;
+  animation-name: face4;
+  animation-duration: 2.5s;
+  animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
 
