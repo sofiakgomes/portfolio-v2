@@ -26,7 +26,7 @@ function About() {
           </p>
           <p>
             You can find my resume{" "}
-            <a href="https://raw.githubusercontent.com/sgomes31/portfolio/main/src/assets/about/resume.pdf" target="_blank">here</a>.
+            <a href="https://raw.githubusercontent.com/sofiakgomes/portfolio/main/src/assets/about/resume.pdf" target="_blank">here</a>.
           </p>
           <h1>CONTACT</h1>
           <p>
