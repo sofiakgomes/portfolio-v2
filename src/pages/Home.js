@@ -11,7 +11,6 @@ const videoUrl2 = "https://www.youtube.com/embed/xZoCYzmMqsU";
 
 
 const layout1Col = [
-    "ogilvy",
     "posters",
     "survivalkit",
     "table",
@@ -32,7 +31,6 @@ const layout2Col = [
     "covid",
   ],
   [
-    "ogilvy",
     "table",
     "survivalkit",
     "epoque",
@@ -47,7 +45,6 @@ const layout3Col = [
     "covid",
   ],
   [
-    "ogilvy",
     "table",
     "survivalkit",
     "box",
@@ -69,7 +66,6 @@ function Home(props) {
     covid: <ShowcaseItem image={thumbnails.campaign2} caption="COVID-19 Feelings" link={campaignLink2} />,
     epoque: <ShowcaseItem image={thumbnails.epoque} caption="La Belle Epoque" link="/epoque" />,
     ipanema: <ShowcaseItem image={thumbnails.ipanema} caption="Girl That Isn't From Ipanema" onClick={() => setVideo2(true)} />,
-    ogilvy: <ShowcaseItem image={thumbnails.ogilvy} />,
     posters: <ShowcaseItem image={thumbnails.bauhaus} caption="Posters" link="/posters" />,
     survivalkit: <ShowcaseItem image={thumbnails.tampon} caption="Modern Woman Survival Kit" link="/survivalkit" />,
     table: <ShowcaseItem image={thumbnails.table} caption="What Do I Bring to the Table?" onClick={() => setVideo1(true)} />,
