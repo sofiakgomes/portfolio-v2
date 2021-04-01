@@ -150,6 +150,7 @@ body {
 
 .menu {
   position: absolute;
+  top: 0;
   height: 48px;
   width: 100vw;
   display: flex;
@@ -300,12 +301,12 @@ body {
   from {
     visibility: visible;
     opacity: 0;
-    top: -80px;
+    transform: translateY(-80px);
   }
   to {
     visibility: visible;
     opacity: 1;
-    top: 0;
+    transform: translateY(0);
   }
 }
 
@@ -313,11 +314,11 @@ body {
   from {
     visibility: visible;
     opacity: 0.85;
-    top: 0;
+    transform: translateY(0);
   }
   to {
     visibility: hidden;
     opacity: 0;
-    top: -80px;
+    transform: translateY(-80px);
   }
 }
