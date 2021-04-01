@@ -2,7 +2,7 @@
   "name": "portfolio-v2",
   "version": "1.0.0",
   "private": true,
-  "homepage": "http://sofiakgomes.github.io/portfolio-v2",
+  "homepage": "https://sofiakgomes.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
