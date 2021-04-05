@@ -1,3 +1,3 @@
 # Portfolio
 
-Source code for my portfolio available here: https://sofiakgomes.github.io/portfolio/.
+Source code for my portfolio available here: https://sofiakgomes.com
