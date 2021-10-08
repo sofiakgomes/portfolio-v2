@@ -22,7 +22,7 @@ function About() {
           </p>
           <p>
             What moves me is problem solving and expressing my creativity, and I hope to achieve my goals and aspirations 
-            trough that.
+            through that.
           </p>
           <p>
             You can find my resume{" "}
@@ -37,7 +37,7 @@ function About() {
             <a href="https://twitter.com/sofiakpgomes_" target="_blank">
               https://twitter.com/sofiakpgomes_
             </a><br/>
-            404-563-6718
+            (404) 563-6718
           </p>
         </div>
       </div>
