@@ -7,6 +7,10 @@ import ipanema from "./ipanema.gif";
 import table from "./table.gif";
 import tampon from "./tampon.gif";
 import zine from "./zine.jpg";
+import duolingo from "./duolingo.png";
+import oreo from "./oreo.jpg";
+import maltesers from "./maltesers.jpg";
+import crayola from "./crayola.jpg";
 
 export {
   bauhaus, 
@@ -17,5 +21,9 @@ export {
   ipanema,
   table,
   tampon,
-  zine
+  zine,
+  duolingo,
+  oreo,
+  maltesers,
+  crayola,
 };

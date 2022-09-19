@@ -7,7 +7,7 @@
 .column {
     display: flex;
     flex-direction: column;
-    width: 33%;
+    width: 50%;
 }
 
 @media screen and (max-width: 1413px) {

@@ -4,90 +4,72 @@ import ShowcaseItem from "../components/ShowcaseItem";
 import Popup from "../components/Popup";
 import * as thumbnails from "../assets/thumbnails";
 
-const campaignLink1 = "https://www.campaignlive.com/article/confessions-21-year-old-young-female-consumers-really-want/1675518";
-const campaignLink2 = "https://www.campaignlive.com/article/adlands-younger-talent-share-feelings-covid-19-crisis/1678004";
-const videoUrl1 = "https://www.youtube.com/embed/jdtn_tqYT54";
-const videoUrl2 = "https://www.youtube.com/embed/xZoCYzmMqsU";
+const duolingoUrl = "https://www.youtube.com/embed/-ewT2pfvADQ";
 
 
 const layout1Col = [
-    "posters",
-    "survivalkit",
-    "table",
-    "zine",
-    "confessions",
-    "ipanema",
-    "epoque",
-    "box",
-    "covid",
+    "duolingo",
+    "oreo",
+    "maltesers",
+    "crayola",
 ];
 
 const layout2Col = [
   [
-    "posters",
-    "confessions",
-    "zine",
-    "ipanema",
-    "covid",
+    "duolingo",
+    "maltesers",
   ],
   [
-    "table",
-    "survivalkit",
-    "epoque",
-    "box",
+    "oreo",
+    "crayola",
   ]
 ];
 
-const layout3Col = [
-  [
-    "posters",
-    "zine",
-    "covid",
-  ],
-  [
-    "table",
-    "survivalkit",
-    "box",
-  ],
-  [
-    "confessions",
-    "ipanema",
-    "epoque",
-  ]
-]
+// const layout3Col = [
+//   [
+//     "oreo",
+//     "crayola",
+//     "posters",
+//     "zine",
+//     "covid",
+//   ],
+//   [
+//     "duolingo",
+//     "box",
+//   ],
+//   [
+//     "maltesers",
+//     "confessions",
+//     "epoque",
+//   ]
+// ]
 
 function Home(props) {
-  const [ video1Open, setVideo1 ] = useState(null);
-  const [ video2Open, setVideo2 ] = useState(null);
+  const [ duolingoOpen, setDuolingo ] = useState(null);
 
   const items = {
-    box: <ShowcaseItem image={thumbnails.box} caption="Pencil Box" link="/box" />,
-    confessions: <ShowcaseItem image={thumbnails.campaign1} caption="Confessions of a 21-year-old" link={campaignLink1} />,
-    covid: <ShowcaseItem image={thumbnails.campaign2} caption="COVID-19 Feelings" link={campaignLink2} />,
-    epoque: <ShowcaseItem image={thumbnails.epoque} caption="La Belle Epoque" link="/epoque" />,
-    ipanema: <ShowcaseItem image={thumbnails.ipanema} caption="Girl That Isn't From Ipanema" onClick={() => setVideo2(true)} />,
-    posters: <ShowcaseItem image={thumbnails.bauhaus} caption="Posters" link="/posters" />,
-    survivalkit: <ShowcaseItem image={thumbnails.tampon} caption="Modern Woman Survival Kit" link="/survivalkit" />,
-    table: <ShowcaseItem image={thumbnails.table} caption="What Do I Bring to the Table?" onClick={() => setVideo1(true)} />,
-    zine: <ShowcaseItem image={thumbnails.zine} caption="Zine" link="/zine" />,
+    duolingo: <ShowcaseItem image={thumbnails.duolingo} caption="Duolingo SkyMiles" onClick={() => setDuolingo(true)} />,
+    oreo: <ShowcaseItem image={thumbnails.oreo} caption="Build Your Oreo" link="/oreo" />,
+    maltesers: <ShowcaseItem image={thumbnails.maltesers} caption="Maltesers: Now in the U.S." link="/maltesers" />,
+    crayola: <ShowcaseItem image={thumbnails.crayola} caption="Crayola" link="/crayola" />,
   }
 
-  if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    // Check if all items have been added to all layouts once
-    console.log("Checking if layouts contain all items...");
-    const throwExc = () => { throw "Not all items are included in all layouts"; };
-    if (layout1Col.length != Object.keys(items).length) throwExc();
-    for (const item in items) if (!layout1Col.includes(item)) throwExc();
-    const flat2Col = layout2Col.flat();
-    if (flat2Col.length != Object.keys(items).length) throwExc();
-    for (const item in items) if (!flat2Col.includes(item)) throwExc();
-    const flat3Col = layout3Col.flat();
-    if (flat3Col.length != Object.keys(items).length) throwExc();
-    for (const item in items) if (!flat3Col.includes(item)) throwExc();
-  }
+  // if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+  //   // Check if all items have been added to all layouts once
+  //   console.log("Checking if layouts contain all items...");
+  //   const throwExc = () => { throw "Not all items are included in all layouts"; };
+  //   if (layout1Col.length != Object.keys(items).length) throwExc();
+  //   for (const item in items) if (!layout1Col.includes(item)) throwExc();
+  //   const flat2Col = layout2Col.flat();
+  //   if (flat2Col.length != Object.keys(items).length) throwExc();
+  //   for (const item in items) if (!flat2Col.includes(item)) throwExc();
+  //   const flat3Col = layout3Col.flat();
+  //   if (flat3Col.length != Object.keys(items).length) throwExc();
+  //   for (const item in items) if (!flat3Col.includes(item)) throwExc();
+  // }
 
   let columns = <Fragment />;
-  if (props.width >= 1400) {
+  /* if (props.width >= 1400) {
     columns = 
       <Fragment>
         <div className="column">
@@ -100,7 +82,7 @@ function Home(props) {
           { layout3Col[2].map(item => items[item]) }
         </div>
       </Fragment>;
-  } else if (props.width >= 900) {
+  } else */ if (props.width >= 900) {
     columns = 
       <Fragment>
         <div className="column">
@@ -120,14 +102,9 @@ function Home(props) {
   return (
     <div className="showcase">
       <Popup
-        isOpen={video1Open}
-        close={() => setVideo1(false)}
-        url={videoUrl1}
-      />
-      <Popup
-        isOpen={video2Open}
-        close={() => setVideo2(false)}
-        url={videoUrl2}
+        isOpen={duolingoOpen}
+        close={() => setDuolingo(false)}
+        url={duolingoUrl}
       />
       {columns}
     </div>

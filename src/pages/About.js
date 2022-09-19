@@ -9,20 +9,11 @@ function About() {
         <div className="about-text">
           <h1>ABOUT</h1>
           <p>
-            My name is Sofia Gomes. I'm a proud Brazilian and an aspiring Art Director currently living in Atlanta, GA.
+            My name is Sofia Gomes. I'm a proud Brazilian currently living in New York City and working as a Creative Assistant (future Art Director) at Momentum Worldwide.
           </p>
           <p>
-            Throughout my journey from Architecture school in Brazil to becoming an international student in the U.S., I 
-            have learned that there's no challenge I'm not willing to take on and that with passion and hard work, any 
-            dream is achievable.
-          </p>
-          <p>
-            Advertising and design are in my mind and heart 100% of the time &mdash; that is, when I'm not looking at pictures 
-            of my <a href="https://www.tiktok.com/@ladydithesecond?lang=en" target="_blank">pomsky</a>.
-          </p>
-          <p>
-            What moves me is problem solving and expressing my creativity, and I hope to achieve my goals and aspirations 
-            through that.
+            I solve problems in a creative, authentic and weird way &mdash; that is, when I'm not managing
+            my <a href="https://www.tiktok.com/@ladydithesecond?lang=en" target="_blank">pomsky's</a> career.
           </p>
           <p>
             You can find my resume{" "}

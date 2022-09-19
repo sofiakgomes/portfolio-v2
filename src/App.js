@@ -10,12 +10,16 @@ import {
 } from "react-router-dom";
 import {
   Home,
+  Misc,
   About,
   Box,
   Epoque,
   Posters,
   SurvivalKit,
-  Zine
+  Zine,
+  Oreo,
+  Maltesers,
+  Crayola,
 } from "./pages";
 
 const menuClass = { null: "", true: "show", false: "hide" }
@@ -67,7 +71,8 @@ function App() {
       </Link>
       <Link to="/"><div className="name">SOFIA GOMES</div></Link>
       <div className={`menu ${menuClass[menuOpen]}`}>
-        <Link to="/" onClick={() => setMenu(false)}><a>HOME</a></Link>
+        <Link to="/" onClick={() => setMenu(false)}><a>ART DIRECTION</a></Link>
+        <Link to="/misc" onClick={() => setMenu(false)}><a>MISCELLANEOUS</a></Link>
         <Link to="/about" onClick={() => setMenu(false)}><a>ABOUT</a></Link>
       </div>
       <div 
@@ -98,6 +103,18 @@ function App() {
           </Route>
           <Route path="/zine">
             <Zine width={width} />
+          </Route>
+          <Route path="/oreo">
+            <Oreo width={width} />
+          </Route>
+          <Route path="/maltesers">
+            <Maltesers width={width} />
+          </Route>
+          <Route path="/crayola">
+            <Crayola width={width} />
+          </Route>
+          <Route path="/misc">
+            <Misc width={width} />
           </Route>
           <Route path="/">
             <Home width={width} />
