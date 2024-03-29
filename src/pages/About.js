@@ -9,15 +9,11 @@ function About() {
         <div className="about-text">
           <h1>ABOUT</h1>
           <p>
-            My name is Sofia Gomes. I'm a proud Brazilian currently living in New York City and working as a Creative Assistant (future Art Director) at Momentum Worldwide.
+            My name is Sofia Gomes. I'm a proud Brazilian currently living in New York City and working as an Associate Art Director at Momentum Worldwide.
           </p>
           <p>
             I solve problems in a creative, authentic and weird way &mdash; that is, when I'm not managing
             my <a href="https://www.tiktok.com/@ladydithesecond?lang=en" target="_blank">pomsky's</a> career.
-          </p>
-          <p>
-            You can find my resume{" "}
-            <a href="https://raw.githubusercontent.com/sofiakgomes/portfolio-v2/main/src/assets/about/resume.pdf" target="_blank">here</a>.
           </p>
           <h1>CONTACT</h1>
           <p>
